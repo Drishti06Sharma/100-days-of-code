@@ -1,12 +1,12 @@
 # include <stdio.h>
 int main(){
-    char word;
-    printf("Enter the word: ");
-    scanf("%c",&word);
-    if( word == 'a' || word == 'e' || word == 'i' || word == 'o' || word == 'u'){
-printf("Vowel");
-    }else{
-        printf("Consonant");
+    int year;
+    printf("Enter the year : ");
+    scanf("%d",&year);
+    if((year%4==0)&&((year%100!=0)||(year%400==0))){
+        printf("%d is a leap year.\n", year);
+    } else {
+        printf("%d is not a leap year.\n", year);
     }
     return 0;
 }
